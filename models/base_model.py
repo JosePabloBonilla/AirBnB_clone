@@ -65,7 +65,9 @@ class BaseModel:
         """
         dictionary = self.__dict__
         dictionary['__class__'] = self.__class__.__name__
-        dictionary['updated_at'] = self.updated_at
-        dictionary['created_at'] = self.created_at
+        for key, val in dictionary.items():
+            if isinstance(val, datetime):
+                dictionary[key] = val.isoformat()
+        dictionary[key] = self.updated_at
 
         return dictionary

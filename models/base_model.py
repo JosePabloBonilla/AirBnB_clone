@@ -68,6 +68,5 @@ class BaseModel:
         for key, val in dictionary.items():
             if isinstance(val, (datetime)):
                 dictionary[key] = val.isoformat()
-        dictionary[key] = val
 
         return dictionary

@@ -57,7 +57,7 @@ class BaseModel:
         """
         updating the updated_at datetime
         """
-        self.updated_at = datetime.now().isoformat()
+        self.updated_at = datetime.now()
 
     def to_dict(self):
         """
@@ -68,6 +68,6 @@ class BaseModel:
         for key, val in dictionary.items():
             if isinstance(val, datetime):
                 dictionary[key] = val.isoformat()
-        dictionary[key] = self.updated_at
+        dictionary[key] = val
 
         return dictionary

@@ -7,6 +7,9 @@ Methods included:
           - created_at
           - updated_at
           - id
+      * adding args and kwargs
+          - if kwargs is not empty: update
+          - if kwargs empty: init
     - __str__
     - save
     - to_dict
